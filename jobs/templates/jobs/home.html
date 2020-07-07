@@ -1,192 +1,206 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Portfolio</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <!-- Favicons -->
-<meta name="theme-color" content="#563d7c">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- Favicons -->
+  <meta name="theme-color" content="#563d7c">
 
 
-    <style>
-        body{
-            font-family: 'Roboto', sans-serif;
-            background-image: linear-gradient(#182C61,#050915);
-            {% comment %} background-image: linear-gradient(#182C61,#050915, black); {% endcomment %}
-        }
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-image: linear-gradient(#182C61, #050915);
+    }
 
-        .card-img-top{
-          border-radius:8px !important;
-        }
+    .card-img-top {
+      border-radius: 8px !important;
+    }
 
-        .card-text{
-          font-size: 14px;
-        }
+    .card-text {
+      font-size: 14px;
+    }
 
-        .card{
-          border-radius:8px !important;
-          background-color:#2C3A47;
-        }
+    .card {
+      border-radius: 8px !important;
+      background-color: #2C3A47;
+    }
 
-        .col-md-4:hover .card{
-          box-shadow:0 0 0px 2px rgba(255,255,255,0.2) !important;
-        }
+    .col-md-4:hover .card {
+      box-shadow: 0 0 0px 2px rgba(255, 255, 255, 0.2) !important;
+    }
 
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
 
-        button{
-            border-radius: 0 !important;
-        }
+    button {
+      border-radius: 0 !important;
+    }
 
-        .jumbotron{
-            background-color:inherit;
-        }
-        .navbar{
-            background-color:none;
-        }
+    .jumbotron {
+      background-color: inherit;
+    }
 
-        .underscore{
-            margin:0 auto;
-            transition:0.4s ease-out;
-            height:2px;
-            width:10%;
-        }
+    .navbar {
+      background-color: none;
+    }
 
-        .nav-item{
-            margin: 0 20px;
-        }
+    .underscore {
+      margin: 0 auto;
+      transition: 0.4s ease-out;
+      height: 2px;
+      width: 10%;
+    }
 
-        .nav-item:hover .underscore{
-            background-color: #FD7272;
-            height:2px;
-            width:100%;
-        }
+    .nav-item {
+      margin: 0 20px;
+    }
 
-        .nav-link:hover{
-            color: #FD7272 !important;
-        }
+    .nav-item:hover .underscore {
+      background-color: #FD7272;
+      height: 2px;
+      width: 100%;
+    }
 
-        .mail{
-            border:1px solid grey;
-            transition: 0.4s ease;
-            background-color: #B33771;
-        }
+    .nav-link:hover {
+      color: #FD7272 !important;
+    }
 
-        .mail:hover{
-            background-color: #e74c3c;
-        }
+    .mail {
+      border: 1px solid grey;
+      transition: 0.4s ease;
+      background-color: #B33771;
+    }
 
-        @media(min-width: 726px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }            
-        }
+    .mail:hover {
+      background-color: #e74c3c;
+    }
 
-        @media(max-width: 800px){
-            .greetings{
-                font-size:30px;
-            }
-        }
-    </style>
-    <!-- Custom styles for this template -->
-    
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="/"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        <div class = "underscore"></div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">
+    @media(min-width: 726px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media(max-width: 800px) {
+      .greetings {
+        font-size: 30px;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href=" {% url 'home'%} ">Home <span class="sr-only">(current)</span></a>
+          <div class="underscore"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/nvkex">
             Github
-        </a>
-        <div class = "underscore"></div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">Resume</a>
-        <div class = "underscore"></div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">Blog</a>
-        <div class = "underscore"></div>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class = "greetings text-white ">Hello there! I am Sumit Bhardwaj.</h1>
-      <p class="lead text-muted"><strong> Web Developer</strong> | <strong> Music Producer</strong></p>
-      <p>
-        <a href = "mailto:scrbwrm@gmail.com"><button class = "btn text-white mail">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-</svg>
-                Email
-            </button>
-        </a>
-      </p>
+          </a>
+          <div class="underscore"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Resume</a>
+          <div class="underscore"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {% url 'allblogs' %} ">Blog</a>
+          <div class="underscore"></div>
+        </li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
-  <div class="album py-5">
-    <div class="container">
+  <main role="main">
 
-      <div class="row">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="greetings text-white ">Hello there! I am Sumit Bhardwaj.</h1>
+        <p class="lead text-muted"><strong> Web Developer</strong> | <strong> Music Producer</strong></p>
+        <p>
+          <a href="mailto:scrbwrm@gmail.com"><button class="btn text-white mail">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+              </svg>
+              Email
+            </button>
+          </a>
+        </p>
+      </div>
+    </section>
 
-        {% for job in jobs.all %}
-        <div class="col-md-4 text-white">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" width="100%" height="180" src = "{{ job.image.url }}" />
-            <div class="card-body">
-              <h4>{{ job.title }}</h4>
-              <p class="card-text " style ="color:#FEA47F">{{ job.summary }}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href = "{{ job.url }}" target = "_blank"><button type="button" class="btn btn-sm btn-outline-success">View</button></a>&nbsp;
-                  <a href = "{{ job.giturl }}" target = "_blank"><button type="button" class="btn btn-sm btn-outline-info">Code</button></a>
+    <div class="album py-5">
+      <div class="container">
+
+        <div class="row">
+
+          {% for job in jobs.all %}
+          <div class="col-md-4 text-white">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" width="100%" height="180" src="{{ job.image.url }}" />
+              <div class="card-body">
+                <h4>{{ job.title }}</h4>
+                <p class="card-text " style="color:#FEA47F">{{ job.summary }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="{{ job.url }}" target="_blank"><button type="button"
+                        class="btn btn-sm btn-outline-success">View</button></a>&nbsp;
+                    <a href="{{ job.giturl }}" target="_blank"><button type="button"
+                        class="btn btn-sm btn-outline-info">Code</button></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
-  </div>
 
-</main>
+  </main>
 
-<footer class="text-muted">
-  <div class="container text-center">
-    <p>Dont copy my fucking website &copy;nvkex {% now "Y" %}</p>
-   </div>
-</footer>
+  <footer class="text-muted">
+    <div class="container text-center">
+      <p>Dont copy my fucking website &copy;nvkex {% now "Y" %}</p>
+    </div>
+  </footer>
+
 </html>

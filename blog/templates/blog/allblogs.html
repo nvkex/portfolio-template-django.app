@@ -1,0 +1,176 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+        .welcome{
+
+            color:#FD7272;
+        }
+
+        body{
+            font-family:Quicksand;
+            {% comment %} font-family: 'Roboto', sans-serif; {% endcomment %}
+            background-image: linear-gradient(#182C61,#050915) ;
+            background-repeat:no-repeat;
+            {% comment %} background-image: linear-gradient(#182C61,#050915, black); {% endcomment %}
+        }
+
+        .blog-content::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .blog-img,.blog-desc{
+            float:left;
+            margin:20px 0;
+        }
+
+        .blog-img img{
+            border-radius:10px;
+        }
+
+        .blog-desc{
+            margin: 20px 20px;
+        }
+
+        .blog-desc a{
+            color:white;
+        }
+
+        .blog-desc p{
+            font-size:14px;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        button{
+            border-radius: 0 !important;
+        }
+
+        .jumbotron{
+            background-color:inherit;
+        }
+        .navbar{
+            background-color:none;
+        }
+
+        .underscore{
+            margin:0 auto;
+            transition:0.4s ease-out;
+            height:2px;
+            width:10%;
+        }
+
+        .nav-item{
+            margin: 0 20px;
+        }
+
+        .nav-item:hover .underscore{
+            background-color: #FD7272;
+            height:2px;
+            width:100%;
+        }
+
+        .nav-link:hover{
+            color: #FD7272 !important;
+        }
+
+        @media(min-width: 726px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }            
+        }
+
+        @media(max-width: 800px){
+            .greetings{
+                font-size:30px;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href=" {% url 'home'%} ">Home <span class="sr-only">(current)</span></a>
+          <div class="underscore"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/nvkex">
+            Github
+          </a>
+          <div class="underscore"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Resume</a>
+          <div class="underscore"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=" {% url 'allblogs'%} ">Blog</a>
+          <div class="underscore"></div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+<main role="main">
+    <p style= "font-size:100px" class = "text-center my-4 welcome">Welcome!</p>
+    <div class = "container">
+    <hr class = "bg-secondary"/>
+        <div class = "">
+            {% for blog in blogs.all %}
+            <div class = "text-white blog-content">
+                <div class = "blog-img">
+                    <img class = "image-fluid" src = "{{ blog.image.url }}" height = "200">
+                </div>
+                <div class = "blog-desc">
+                    <a class = "blog-title" href = " {% url 'detail' blog.id %} "><h4>{{blog.title}}</h4></a>
+                    <p class = "text-muted blog-date">{{ blog.pubDate }}</p>
+                    <p> {{ blog.summary }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+<br>
+<footer class="text-muted">
+  <div class="container text-center">
+    <p>Dont copy my fucking website &copy;nvkex {% now "Y" %}</p>
+   </div>
+</footer>
+</html>
